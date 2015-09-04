@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyMovieApp.Models.DataModels.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="MovieId" />
+    </Key>
+    <Property Name="MovieId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Runtime" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Genre" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Director" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Writer" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Actors" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Plot" Type="varchar" MaxLength="5000" Nullable="false" />
+    <Property Name="Poster" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ImdbRating" Type="decimal" Precision="2" Scale="1" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MyMovieAppModelsDataModelsStoreContainer">
+    <EntitySet Name="Movie" EntityType="Self.Movie" Schema="appSchema" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
